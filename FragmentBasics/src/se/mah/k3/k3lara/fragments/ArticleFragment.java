@@ -15,8 +15,6 @@
  */
 package se.mah.k3.k3lara.fragments;
 
-
-import android.R.color;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -31,7 +29,7 @@ public class ArticleFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, 
         Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-		View v =  inflater.inflate(R.layout.article_view2, container, false);
+		View v =  inflater.inflate(R.layout.fragment_article_view, container, false);
 		//Get the TextView from the View
 		TextView tv = (TextView)v.findViewById(R.id.header);
 		//Change the headline
@@ -44,7 +42,7 @@ public class ArticleFragment extends Fragment {
 			//Here is the method that will be called when the button is clicked.
 			@Override
 			public void onClick(View v) {
-				//The View in on click is the button 
+				//The View above in on click is the button 
 			}
 		});
 		//Return the view that we prepared so it can be drawn on the fragment.
