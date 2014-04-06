@@ -15,7 +15,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class TestSafeActivity extends Activity {
-	Safe safe;
+	public static Safe safe;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -36,6 +37,7 @@ public class TestSafeActivity extends Activity {
 			Log.i("PassSafe","In OnResume read from storage:" + item.getCompany());
 		}
 	}
+
 	@Override
 	protected void onPause() {
 		super.onPause();
@@ -45,22 +47,6 @@ public class TestSafeActivity extends Activity {
 		}
 	}
 	
-	@Override
-	protected void onStop() {
-		Log.i("PassSafe","In onStop:");
-		super.onRestart();
-	}
-	
-	@Override
-	protected void onRestart() {
-		Log.i("PassSafe","In onRestart:");
-		super.onRestart();
-	}
-	@Override
-	protected void onDestroy() {
-		Log.i("PassSafe","In onDestroy:");
-		super.onDestroy();
-	}
 	
 	public void add(View v){
 		EditText companyView = (EditText)findViewById(R.id.company);

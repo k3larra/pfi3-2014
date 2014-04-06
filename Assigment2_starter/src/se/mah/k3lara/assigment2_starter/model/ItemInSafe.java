@@ -1,10 +1,10 @@
 package se.mah.k3lara.assigment2_starter.model;
 
 public class ItemInSafe {
- private String company="";
- private String loginID="";
- private String password="";
- 
+	 private String company="";
+	 private String loginID="";
+	 private String password="";
+	 
 	public ItemInSafe(String company) {
 		this.company = company;
 	}
