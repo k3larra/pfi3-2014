@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.android.fragments;
+package se.mah.k3.k3lara.fragments;
 
 public class Ipsum {
 
