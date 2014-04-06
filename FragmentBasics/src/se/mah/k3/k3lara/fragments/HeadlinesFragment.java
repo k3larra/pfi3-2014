@@ -43,18 +43,5 @@ public class HeadlinesFragment extends ListFragment{ //This is a special fragmen
 	}
    
     
-	//This is a special method for ListFragment that is called when an item is clicked.
-    @Override
-    public void onListItemClick(ListView l, View v, int position, long id) {
-    	super.onListItemClick(l, v, position, id);
-    	TextView tv = (TextView)v;
-    	Log.i("k3lara","Clicked row: "+ tv.getText());
-    	//Swop in the articles fragment the verbose way
-    	FragmentManager manager = getFragmentManager();
-    	FragmentTransaction ft = manager.beginTransaction();
-    	ArticleFragment af = new ArticleFragment();  //WE are supposed to check if this exists but that is for next week
-    	//ft.addToBackStack(null);  //add the first fragment to the stack so we can use back button
-    	ft.add(R.id.main_activity_container, af);  //Put this new fragment on top of the other   	
-    	ft.commit();
-    }
+	
 }
