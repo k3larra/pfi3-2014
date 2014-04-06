@@ -2,6 +2,7 @@ package se.mah.k3.k3lara.fragments;
 
 
 import android.app.Activity;
+import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.Menu;
@@ -16,10 +17,11 @@ public class MainActivity extends Activity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity_container);  //Add the layout
         if (savedInstanceState == null) {
-        	FragmentTransaction ft = getFragmentManager().beginTransaction(); //Start adding the fragment by getting the manager for handling this
+        	FragmentManager fm = getFragmentManager();
+        	FragmentTransaction ft = fm.beginTransaction(); //Start adding the fragment by getting the manager for handling this
         	HeadlinesFragment hf = new HeadlinesFragment(); //Create the fragment 
 			ft.add(R.id.main_activity_container, hf); //And add it to the manager
-			ft.commit(); //OK go ahed do your transaction nothing realy happends untill here
+			ft.commit(); //OK go ahead do your transaction nothing really happens until here
 		}
     }
     
