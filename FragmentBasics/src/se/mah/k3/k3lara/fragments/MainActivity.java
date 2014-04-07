@@ -5,8 +5,10 @@ import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 
 
 public class MainActivity extends Activity  {
@@ -31,6 +33,19 @@ public class MainActivity extends Activity  {
     	MenuInflater inflater = getMenuInflater();
     	inflater.inflate(R.menu.main_menu, menu);  //This is the menu xml
     	return super.onCreateOptionsMenu(menu);
+    }
+    
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+    	// TODO Auto-generated method stub
+    	if (item.getItemId()==R.id.menu_share){
+    		Log.i("k3larra","share");
+    		return true;
+    	} else if (item.getItemId()==R.id.menu_paste){
+    		Log.i("k3larra","paste");
+    		return true;
+    	}
+    	return super.onOptionsItemSelected(item);
     }
     
 }

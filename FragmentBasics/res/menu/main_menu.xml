@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
-    <item android:id="@+id/item1" android:title="Test" android:icon="@drawable/ic_launcher"></item>
+    <item android:id="@+id/about" android:title="About" android:icon="@drawable/ic_launcher" android:showAsAction="never"></item>
+    <item android:id="@+id/menu_share" android:showAsAction="always" android:title="share" android:icon="@drawable/ic_action_share"></item>
+    <item android:id="@+id/menu_paste" android:showAsAction="always" android:title="paste" android:icon="@drawable/ic_action_paste"></item>
     
 
 </menu>

@@ -42,6 +42,31 @@ public class HeadlinesFragment extends ListFragment{ //This is a special fragmen
 		return super.onCreateView(inflater, container, savedInstanceState);
 	}
    
-    
+    @Override
+    	public void onListItemClick(ListView l, View v, int position, long id) {
+    		// TODO Auto-generated method stub
+    		super.onListItemClick(l, v, position, id);
+    		Log.i("k3larra","Position:"+position);
+    		FragmentManager fm = getFragmentManager();
+    		FragmentTransaction ft =fm.beginTransaction();
+    		ArticleFragment af = new ArticleFragment();
+    		ft.addToBackStack(null);
+    		ft.add(R.id.main_activity_container, af);
+    		ft.commit();
+    		
+    	}
 	
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
