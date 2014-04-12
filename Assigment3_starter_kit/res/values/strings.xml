@@ -16,7 +16,5 @@ limitations under the License.
 -->
 
 <resources>
-    <string name="app_name">Fragment Basics</string>
-    <string name="lorem_ipsum">Fusce ut sodales ligula. Ut eget elementum augue, vel fringilla odio. Nulla rutrum turpis molestie, faucibus lorem at, gravida neque. Aenean sed nisi et tellus tristique egestas. Maecenas sodales fermentum adipiscing. Donec blandit lorem nibh, in dapibus lacus iaculis non. Aliquam erat volutpat. Fusce sagittis bibendum vehicula. Integer dapibus tellus quis velit pretium, at dapibus lorem tempus. Donec ultricies erat ac erat tincidunt, in porta diam sodales. Quisque suscipit cursus nunc, vitae vehicula massa venenatis quis. </string>
-   
+    <string name="app_name">Planet Info</string>
 </resources>

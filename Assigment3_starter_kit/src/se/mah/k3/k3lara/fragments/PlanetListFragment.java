@@ -39,12 +39,9 @@ public class PlanetListFragment extends Activity  {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
     	// TODO Auto-generated method stub
-    	if (item.getItemId()==R.id.menu_share){
+    	if (item.getItemId()==R.id.about){
     		Log.i("k3larra","share");
     		return true; //Returning true indicates to the system that we handled the meny selection here
-    	} else if (item.getItemId()==R.id.menu_paste){
-    		Log.i("k3larra","paste");//Returning true indicates to the system that we handled the meny selection here
-    		return true;
     	}
     	return false;//If we didn't handle the selection we return false
     }
