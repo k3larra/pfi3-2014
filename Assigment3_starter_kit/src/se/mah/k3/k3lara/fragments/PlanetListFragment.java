@@ -1,49 +1,47 @@
 package se.mah.k3.k3lara.fragments;
-
-
-import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.app.ListFragment;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
-
-public class PlanetListFragment extends Activity  {
-
-    /** Called when the activity is first created. */
+public class PlanetListFragment extends ListFragment{ //This is a special fragment that creates a list
+	
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+		//Move this to values in a string array
+		String[] planets = {"Merkurius","Venus","Jorden","Mars","Jupiter","Saturnus","Uranus","Neptunus"};
+	    // Create an ArrayAdapter for the list view, using a string Array
+	    // An ArrayAdapter is the magic rolls up all the items in a list using a pre-constructed
+	    ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, planets);
+	    //Ok tell the fragment that we are serious want to load the list with help from the adapter
+	    setListAdapter(myAdapter);
+	    //return whatever it will not really be used since the adapter will roll up the "android.R.layout.simple_list_item_1" with the planets instead
+		return super.onCreateView(inflater, container, savedInstanceState);
+	}
+   
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_activity_container);  //Add the layout
-        if (savedInstanceState == null) {  //If savedInstanceState not is null then we already have the activity fx if we were interupted by a phonecall and  b
-        	FragmentManager fm = getFragmentManager();
-        	FragmentTransaction ft = fm.beginTransaction(); //Start adding the fragment by getting the manager for handling this
-        	HeadlinesFragment hf = new HeadlinesFragment(); //Create the fragment 
-			ft.add(R.id.main_activity_container, hf); //And add it to the manager
-			ft.commit(); //OK go ahead do your transaction nothing really happens until here
-		}
-    }
-    
-    //Here the meny is created
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-    	MenuInflater inflater = getMenuInflater();
-    	inflater.inflate(R.menu.main_menu, menu);  //This is the menu xml and this packs it up
-    	return true; //true means that the menu will be shown
-    }
-    
-    //If you select a meny item this method is called
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-    	// TODO Auto-generated method stub
-    	if (item.getItemId()==R.id.about){
-    		Log.i("k3larra","share");
-    		return true; //Returning true indicates to the system that we handled the meny selection here
+    	public void onListItemClick(ListView l, View v, int position, long id) {
+    		super.onListItemClick(l, v, position, id);
+    		//Here we know that an item is cliced at position p so lets move to that Fragment
     	}
-    	return false;//If we didn't handle the selection we return false
-    }
+	
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 }
